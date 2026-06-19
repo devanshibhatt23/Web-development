@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <nav class="block">
+        <p class="para">Welcome to my website</p>
+    </nav>
+
+    <div>
+        <h3>this is div1</h3>
+    </div>
+
+    <div class="block">
+        <h4>My name is <span id="username">Devanshi Bhatt</span></h4>
+        <p class="para">Here's a code for you</p>
+        <code>console.log("hey")</code>
+    </div>
+
+    <script>
+        // query selectors - select by tag name, id (#), class (.)
+
+        // it manipulates the first element if many elements of same tag/class are present
+        const div = document.querySelector("div");
+        console.log(div);
+        console.log(div.innerHTML);
+        console.log(div.children);
+
+        div.innerHTML = "<h1>Hacked!</h1>";
+
+        const username = document.querySelector("#username");
+        console.log(username);
+
+        username.innerText = "Hermione";
+
+        const x = document.querySelector(".block");
+        console.log(x);
+
+        const elements = document.querySelectorAll("div");
+        elements.forEach((ele) => {
+            console.log(ele);
+        })
+    </script>
+</body>
+</html>
