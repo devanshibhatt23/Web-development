@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM manipulation</title>
+    <style>
+        .red_color {
+            color: red;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <nav class="block">
@@ -43,6 +51,20 @@
         elements.forEach((ele) => {
             console.log(ele);
         })
+
+        const el = document.getElementById("username");
+        console.log(el);
+        
+        el.classList.add("red_color", "underline");
+        console.log(el.classList);
+
+        el.classList.remove("red_color");
+
+        el.style.color = "blue";
+
+        el.parentElement.style.backgroundColor = "grey";
+
+        el.remove();
     </script>
 </body>
 </html>
