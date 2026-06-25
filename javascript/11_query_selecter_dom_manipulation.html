@@ -65,6 +65,11 @@
         el.parentElement.style.backgroundColor = "grey";
 
         el.remove();
+
+        const eles = document.getElementsByClassName("block");
+        for(let i=0; i<eles.length; i++) {
+            eles[i].style.background = "yellow";
+        }
     </script>
 </body>
 </html>
